@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="width_rate" format="float" />
+    <attr name="height_rate" format="float" />
+    <attr name="according_width" format="boolean" />
+
+    <declare-styleable name="RateFrameLayout">
+        <attr name="width_rate" />
+        <attr name="height_rate" />
+        <attr name="according_width" />
+    </declare-styleable>
+
+    <declare-styleable name="RateLinearLayout">
+        <attr name="width_rate" />
+        <attr name="height_rate" />
+        <attr name="according_width" />
+    </declare-styleable>
+
+    <declare-styleable name="RateRelativeLayout">
+        <attr name="width_rate" />
+        <attr name="height_rate" />
+        <attr name="according_width" />
+    </declare-styleable>
+
+    <declare-styleable name="RateImageView">
+        <attr name="width_rate" />
+        <attr name="height_rate" />
+        <attr name="according_width" />
+    </declare-styleable>
+
+</resources>
