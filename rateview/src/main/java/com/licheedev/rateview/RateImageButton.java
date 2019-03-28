@@ -2,40 +2,29 @@ package com.licheedev.rateview;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.os.Build;
 import android.support.annotation.AttrRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.annotation.RequiresApi;
-import android.support.annotation.StyleRes;
 import android.util.AttributeSet;
-import android.widget.RelativeLayout;
 
-public class RateRelativeLayout extends RelativeLayout {
+public class RateImageButton extends android.support.v7.widget.AppCompatImageButton {
 
     private float rate;
     private boolean accordingWidth;
 
-    public RateRelativeLayout(@NonNull Context context) {
+    public RateImageButton(@NonNull Context context) {
         super(context);
         init(context, null);
     }
 
-    public RateRelativeLayout(@NonNull Context context, @Nullable AttributeSet attrs) {
+    public RateImageButton(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         init(context, attrs);
     }
 
-    public RateRelativeLayout(@NonNull Context context, @Nullable AttributeSet attrs,
+    public RateImageButton(@NonNull Context context, @Nullable AttributeSet attrs,
         @AttrRes int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        init(context, attrs);
-    }
-
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    public RateRelativeLayout(@NonNull Context context, @Nullable AttributeSet attrs,
-        @AttrRes int defStyleAttr, @StyleRes int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
         init(context, attrs);
     }
 
@@ -43,14 +32,14 @@ public class RateRelativeLayout extends RelativeLayout {
 
         if (attrs != null) {
             TypedArray typedArray =
-                context.obtainStyledAttributes(attrs, R.styleable.RateRelativeLayout);
+                context.obtainStyledAttributes(attrs, R.styleable.RateImageButton);
 
-            float widthRate = typedArray.getFloat(R.styleable.RateRelativeLayout_width_rate, 0);
+            float widthRate = typedArray.getFloat(R.styleable.RateImageButton_width_rate, 0);
 
-            float heightRate = typedArray.getFloat(R.styleable.RateRelativeLayout_height_rate, 0);
+            float heightRate = typedArray.getFloat(R.styleable.RateImageButton_height_rate, 0);
 
             accordingWidth =
-                typedArray.getBoolean(R.styleable.RateRelativeLayout_according_width, true);
+                typedArray.getBoolean(R.styleable.RateImageButton_according_width, true);
 
             if (widthRate > 0 && heightRate > 0) {
 

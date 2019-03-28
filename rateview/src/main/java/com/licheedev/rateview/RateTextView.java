@@ -2,55 +2,42 @@ package com.licheedev.rateview;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.os.Build;
 import android.support.annotation.AttrRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.annotation.RequiresApi;
-import android.support.annotation.StyleRes;
 import android.util.AttributeSet;
-import android.widget.RelativeLayout;
 
-public class RateRelativeLayout extends RelativeLayout {
+public class RateTextView extends android.support.v7.widget.AppCompatTextView {
 
     private float rate;
     private boolean accordingWidth;
 
-    public RateRelativeLayout(@NonNull Context context) {
+    public RateTextView(@NonNull Context context) {
         super(context);
         init(context, null);
     }
 
-    public RateRelativeLayout(@NonNull Context context, @Nullable AttributeSet attrs) {
+    public RateTextView(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         init(context, attrs);
     }
 
-    public RateRelativeLayout(@NonNull Context context, @Nullable AttributeSet attrs,
+    public RateTextView(@NonNull Context context, @Nullable AttributeSet attrs,
         @AttrRes int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        init(context, attrs);
-    }
-
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    public RateRelativeLayout(@NonNull Context context, @Nullable AttributeSet attrs,
-        @AttrRes int defStyleAttr, @StyleRes int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
         init(context, attrs);
     }
 
     private void init(Context context, AttributeSet attrs) {
 
         if (attrs != null) {
-            TypedArray typedArray =
-                context.obtainStyledAttributes(attrs, R.styleable.RateRelativeLayout);
+            TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.RateTextView);
 
-            float widthRate = typedArray.getFloat(R.styleable.RateRelativeLayout_width_rate, 0);
+            float widthRate = typedArray.getFloat(R.styleable.RateTextView_width_rate, 0);
 
-            float heightRate = typedArray.getFloat(R.styleable.RateRelativeLayout_height_rate, 0);
+            float heightRate = typedArray.getFloat(R.styleable.RateTextView_height_rate, 0);
 
-            accordingWidth =
-                typedArray.getBoolean(R.styleable.RateRelativeLayout_according_width, true);
+            accordingWidth = typedArray.getBoolean(R.styleable.RateTextView_according_width, true);
 
             if (widthRate > 0 && heightRate > 0) {
 

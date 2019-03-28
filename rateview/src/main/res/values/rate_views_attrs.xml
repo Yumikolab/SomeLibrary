@@ -29,4 +29,22 @@
         <attr name="according_width" />
     </declare-styleable>
 
+    <declare-styleable name="RateImageButton">
+        <attr name="width_rate" />
+        <attr name="height_rate" />
+        <attr name="according_width" />
+    </declare-styleable>
+
+    <declare-styleable name="RateTextView">
+        <attr name="width_rate" />
+        <attr name="height_rate" />
+        <attr name="according_width" />
+    </declare-styleable>
+
+    <declare-styleable name="RateButton">
+        <attr name="width_rate" />
+        <attr name="height_rate" />
+        <attr name="according_width" />
+    </declare-styleable>
+    
 </resources>
