@@ -11,6 +11,6 @@
 	}
 
     implementation 'com.github.licheedev.SomeLibrary:myutils:0.02'
-    implementation 'com.github.licheedev.SomeLibrary:rateview:0.02'
+    implementation 'com.github.licheedev.SomeLibrary:rateview:0.04'
     implementation 'com.github.licheedev.SomeLibrary:labelview:0.03'
 ```
