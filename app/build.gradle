@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    defaultConfig {
+        applicationId "com.licheedev.somelibrary"
+        minSdkVersion 15
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    if (rootProject.ext.useRemote) {
+        implementation "com.github.licheedev.SomeLibrary:labelview:$labelviewVer"
+        implementation "com.github.licheedev.SomeLibrary:myutils:$myutilsVer"
+        implementation "com.github.licheedev.SomeLibrary:statuslayout:$statuslayoutVer"
+        implementation "com.github.licheedev.SomeLibrary:base:$baseVer"
+    } else {
+        implementation project(':labelview')
+        implementation project(':myutils')
+        implementation project(':statuslayout')
+        implementation project(':base')
+    }
+}

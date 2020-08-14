@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff0000"
+    android:orientation="vertical"
+    tools:context="com.licheedev.somelibrary.MainActivity">
+    
+
+
+    <com.licheedev.status.TitleBar
+        android:id="@+id/title_bar"
+        style="@style/TitleBarStyle"
+        app:fitStatusBar="true"
+        app:titleRightText="右按钮"
+        app:titleText="测试TitleBar"
+        app:titleTextBold="false" />
+
+
+    <com.licheedev.status.TopLinearLayout
+        android:layout_width="match_parent"
+        app:fitStatusBar="true"
+        android:layout_height="0dp">
+
+        <com.licheedev.labelview.IconText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/clickable_bg_white"
+            android:clickable="true"
+            app:icon_drawable="@mipmap/ic_launcher"
+            app:label_text="fadfdafasdfa" />
+    </com.licheedev.status.TopLinearLayout>
+
+    <com.licheedev.labelview.LabelTextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/clickable_bg"
+        android:clickable="true"
+        app:icon_drawable="@mipmap/ic_launcher"
+        app:label_text="hahahah"
+        app:value_text="nnnnnnnnnn" />
+
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/clickable_bg_icon" />
+
+
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--默认点击背景，低版本点击半透明，高版本填充涟漪效果-->
+    <item name="clickable_bg" type="drawable">@drawable/my_ripple_default</item>
+    <!--无边界主题色的点击背景-->
+    <item name="clickable_bg_borderless" type="drawable">@drawable/my_ripple_default_borderless
+    </item>
+    <!--未点击时，颜色为白色，点击后涟漪-->
+    <item name="clickable_bg_white" type="drawable">@drawable/my_ripple_default_white_selector
+    </item>
+    <!--低版本为全透明按下没反应，高版本为涟漪效果-->
+    <item name="clickable_trans" type="drawable">@drawable/my_ripple_default</item>
+    <!--带图标方形按钮点击背景，低版本为变暗，高版本为圆形涟漪效果（带边距）-->
+    <item name="clickable_bg_icon" type="drawable">@drawable/my_ripple_default_action_item</item>
+    <!--带图标方形按钮点击背景，低版本为变暗，高版本为圆形涟漪效果（无边距）-->
+    <item name="clickable_bg_icon_no_padding" type="drawable">@drawable/my_ripple_default_action_item_no_padding</item>
+</resources>

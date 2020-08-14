@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="my_on_pressed_default">#1A000000</color>
+    <color name="my_on_pressed_default_no_alpha">#ededed</color>
+    <color name="my_on_pressed_ripple_default">#1A000000</color>
+    <color name="my_on_pressed_ripple_borderless">#33000000</color>
+</resources>

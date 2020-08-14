@@ -1,0 +1,60 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'),
+                'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    api 'androidx.appcompat:appcompat:1.2.0'
+
+    // Eventbus
+    api 'org.greenrobot:eventbus:3.2.0'
+
+    // 一些工具类
+
+    if (rootProject.ext.useRemote) {
+        api "com.github.licheedev.SomeLibrary:myutils:$myutilsVer"
+        api "com.github.licheedev.SomeLibrary:clickablebg:$clickablebgVer"
+        api "com.github.licheedev.SomeLibrary:rxjava2ex:$rxjava2exVer"
+        api "com.github.licheedev.SomeLibrary:rxjava3ex:$rxjava3exVer"
+        api "com.github.licheedev.SomeLibrary:widgets:$widgetsVer"
+    } else {
+        api project(':myutils')
+        api project(':clickablebg')
+        api project(':rxjava2ex')
+        api project(':rxjava3ex')
+        api project(':widgets')
+    }
+}
+
+apply from: '../jitpack.gradle'
+
+

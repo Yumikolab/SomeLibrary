@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--标题栏通用-->
+    <attr name="titleTextColor" format="color" />
+    <attr name="titleText" format="string" />
+    <attr name="titleLeftDrawable" format="reference" />
+    <attr name="titleRightDrawable" format="reference" />
+    <attr name="titleLeftText" format="string" />
+    <attr name="titleRightText" format="string" />
+    <attr name="titleShowLine" format="boolean" />
+    <attr name="titleLineColor" format="color" />
+    <attr name="titleShowLeftImage" format="boolean" />
+    <attr name="titleShowRightImage" format="boolean" />
+    <attr name="titleShowLeftText" format="boolean" />
+    <attr name="titleShowRightText" format="boolean" />
+    <attr name="titleLeftTextColor" format="color" />
+    <attr name="titleRightTextColor" format="color" />
+    <attr name="titleTextSize" format="dimension" />
+    <attr name="titleButtonTextSize" format="dimension" />
+
+    <!--适配状态栏-->
+    <attr name="fitStatusBar" format="boolean" />
+    <!--定义状态栏参考线ID-->
+    <item name="statusGuideline" type="id" />
+
+
+    <declare-styleable name="TitleBar">
+        <attr name="titleShowLeftImage" />
+        <attr name="titleShowRightImage" />
+        <attr name="titleShowLeftText" />
+        <attr name="titleShowRightText" />
+
+        <attr name="titleText" />
+        <attr name="titleLeftDrawable" />
+        <attr name="titleRightDrawable" />
+        <attr name="titleLeftText" />
+        <attr name="titleRightText" />
+
+        <attr name="titleImageBg" format="reference" />
+        <attr name="titleTextBg" format="reference" />
+        <attr name="titleShowLine" />
+
+        <attr name="titleLineColor" />
+        <attr name="titleTextColor" />
+        <attr name="titleTextSize" />
+        <attr name="titleLeftTextColor" />
+        <attr name="titleRightTextColor" />
+
+        <attr name="titleButtonTextSize" />
+        <attr name="fitStatusBar" />
+
+        <!--用来打底的布局，比如在最底层塞一个图片做背景-->
+        <attr name="titleBottomLayout" format="reference" />
+
+        <!--标题栏加粗-->
+        <attr name="titleTextBold" format="boolean" />
+
+        <!--按钮文本左右的边距-->
+        <attr name="textButtonPadding" format="dimension" />
+        <!--标题文本最大宽度-->
+        <attr name="titleMaxWidth" format="dimension" />
+        <!--底部线条高度-->
+        <attr name="titleBottomLineHeight" format="dimension" />
+    </declare-styleable>
+
+    <!--一些默认值-->
+    <dimen name="default_title_text_size">18dp</dimen>
+    <dimen name="default_title_button_text_size">15dp</dimen>
+    <dimen name="default_text_button_padding">8dp</dimen>
+    <dimen name="default_title_max_width">250dp</dimen>
+    <dimen name="default_bottom_line_height">1dp</dimen>
+
+    <color name="default_title_text_color">#000000</color>
+    <color name="default_title_bottom_line_color">#dadada</color>
+
+    <color name="default_title_line_color">#dadada</color>
+
+
+    <item name="title_bar_button_bg" type="drawable">@drawable/clickable_bg_icon</item>
+    <item name="title_bar_text_bg" type="drawable">@drawable/clickable_bg</item>
+
+    <declare-styleable name="TopFrameLayout">
+        <attr name="fitStatusBar" />
+    </declare-styleable>
+
+    <declare-styleable name="TopLinearLayout">
+        <attr name="fitStatusBar" />
+    </declare-styleable>
+
+    <declare-styleable name="TopRelativeLayout">
+        <attr name="fitStatusBar" />
+    </declare-styleable>
+
+
+</resources>

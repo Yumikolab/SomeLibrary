@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <attr name="label_text" format="string" />
+    <attr name="value_text" format="string" />
+    <attr name="icon_drawable" format="reference" />
+
+    <attr name="override_layout" format="reference" />
+    <attr name="override_label_id" format="reference" />
+    <attr name="override_value_id" format="reference" />
+    <attr name="override_icon_id" format="reference" />
+
+    <attr name="label_visibility">
+        <enum name="visible" value="0" />
+        <enum name="invisible" value="1" />
+        <enum name="gone" value="2" />
+    </attr>
+
+    <attr name="value_visibility">
+        <enum name="visible" value="0" />
+        <enum name="invisible" value="1" />
+        <enum name="gone" value="2" />
+    </attr>
+
+    <attr name="icon_visibility">
+        <enum name="visible" value="0" />
+        <enum name="invisible" value="1" />
+        <enum name="gone" value="2" />
+    </attr>
+
+
+    <declare-styleable name="IconText">
+        <attr name="label_text" />
+        <attr name="icon_drawable" />
+        
+        <attr name="override_layout" />
+        <attr name="override_label_id" />
+        <attr name="override_icon_id" />
+    </declare-styleable>
+
+
+    <declare-styleable name="LabelTextView">
+        <attr name="label_text" />
+        <attr name="value_text" />
+        <attr name="icon_drawable" />
+
+        <attr name="override_layout" />
+        <attr name="override_label_id" />
+        <attr name="override_value_id" />
+        <attr name="override_icon_id" />
+
+        <attr name="label_visibility" />
+        <attr name="value_visibility" />
+        <attr name="icon_visibility" />
+    </declare-styleable>
+
+</resources>

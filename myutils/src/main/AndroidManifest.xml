@@ -1,0 +1,12 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.licheedev.myutils">
+
+    <application>
+        <!-- 全局Context提供者 -->
+        <provider
+            android:name="com.licheedev.context.ApplicationContextProvider"
+            android:authorities="${applicationId}.contextprovider"
+            android:exported="false" />
+    </application>
+
+</manifest>
