@@ -7,17 +7,17 @@ buildscript {
         compileSdkVersion = 29
         targetSdkVersion = 29
         
-        useRemote = false
+        useRemote = true
 
         // 真正的版本
-        initVer = "x.x.x"
-        clickablebgVer = initVer
-        contextVer = initVer
-        rxjava3exVer = initVer
-        rxjava2exVer = initVer
-        rateviewVer = initVer
-        labelviewVer = initVer
-        widgetsVer = initVer
+        lastVer = "d09d9e169e"
+        clickablebgVer = lastVer
+        contextVer = lastVer
+        rxjava3exVer = lastVer
+        rxjava2exVer = lastVer
+        rateviewVer = lastVer
+        labelviewVer = lastVer
+        widgetsVer = lastVer
         
         //statuslayoutVer = "1.2.0"
         //myutilsVer = "1.2.0"
