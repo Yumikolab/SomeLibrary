@@ -29,7 +29,7 @@ dependencies {
     api 'androidx.appcompat:appcompat:1.2.0'
 
     if (rootProject.ext.useRemote) {
-        api "com.github.licheedev.SomeLibrary:context:$contextVer"
+        api "com.github.licheedev.SomeLibrary:context:$lastVer"
     } else {
         api project(':context')
     }

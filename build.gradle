@@ -10,17 +10,7 @@ buildscript {
         useRemote = true
 
         // 真正的版本
-        lastVer = "d4893b0738"
-        clickablebgVer = lastVer
-        contextVer = lastVer
-        rxjava3exVer = lastVer
-        rxjava2exVer = lastVer
-        rateviewVer = lastVer
-        labelviewVer = lastVer
-        widgetsVer = lastVer
-        statuslayoutVer = lastVer
-        myutilsVer = lastVer
-        baseVer = "1.2.0"
+        lastVer = "e6b82d4a6d"
         
     }
 

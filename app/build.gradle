@@ -33,10 +33,10 @@ dependencies {
     })
 
     if (rootProject.ext.useRemote) {
-        implementation "com.github.licheedev.SomeLibrary:labelview:$labelviewVer"
-        implementation "com.github.licheedev.SomeLibrary:myutils:$myutilsVer"
-        implementation "com.github.licheedev.SomeLibrary:statuslayout:$statuslayoutVer"
-        implementation "com.github.licheedev.SomeLibrary:base:$baseVer"
+        implementation "com.github.licheedev.SomeLibrary:labelview:$lastVer"
+        implementation "com.github.licheedev.SomeLibrary:myutils:$lastVer"
+        implementation "com.github.licheedev.SomeLibrary:statuslayout:$lastVer"
+        implementation "com.github.licheedev.SomeLibrary:base:$lastVer"
     } else {
         implementation project(':labelview')
         implementation project(':myutils')
